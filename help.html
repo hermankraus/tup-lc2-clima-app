@@ -13,6 +13,7 @@
 <body>
     <header>
         <h1>
+            <img src="./img/favicon 32x32.png" alt="IMG">
             <span>Clima App</span>
         </h1>
         <nav>
@@ -26,8 +27,12 @@
     <!-- Contenido principal de la página -->
     <main>
         <h2>Ayuda Clima App v.1.0</h2>
-        <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer" >OperWeatherMap</a></p>
-        <p>Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima.</a></p>
+        <section>
+            <div class="card">
+                <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer" >OperWeatherMap</a></p>
+                <p>Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima.</a></p>
+            </div>  
+        </section>    
         <section id="help">
             <form action="/form.php">
                 <label for="Name">Nombre:</label>
@@ -37,17 +42,10 @@
                 <input type="email">
                 <br>
                 <label for="Message">Mensaje:</label>
-                <p><textarea name="Message"></textarea></p>
+                <p><textarea name="Message" rows="10" cols="30"></textarea></p>
                 <input type="button" class="button" value="Limpiar">
                 <input type="button" class="button" value="Enviar">
             </form>
-        </section>
-        <section id="help">
-            <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
-            
-        </section>
-        <section id="section-weather-result">
-            <!-- Sección donde se debe mostrar el clima de la ciudad -->
         </section>
     </main>
     <footer>
