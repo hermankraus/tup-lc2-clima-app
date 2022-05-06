@@ -26,11 +26,20 @@ ul {
     margin: 0;
 }
 
-button,
-a {
+.button {
     user-select: none;
     -webkit-user-select: none;
+    background-color: var(--color-theme);
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 7px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 12spx;
 }
+
 
 header {
     position: fixed;
@@ -63,11 +72,14 @@ nav li a {
 nav li a:hover{
     background: var(--color-active);
     color: var(--color-theme);
+     
 }
 nav li.current-page a{
     color: var(--color-theme);
     background: var(--color-active);
     pointer-events: none;
+    border-top-left-radius:  15px;
+    border-top-right-radius:  15px;
 }
 
 main {

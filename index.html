@@ -7,6 +7,7 @@
     <title>Clima app</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/index.css">
     <link rel="shortcut icon" href="./img/favicon-16x16 app clima.png" type="image/x-icon">
 </head>
 
@@ -29,16 +30,17 @@
         <h2>El Clima Ahora</h2>
         <section id="form-city-list">
             <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
-            <form action="/form.php">
+            <form action="">
                 <select name="seleccionar_ciudad" id="seleccionar_ciudad">
                     <option value="" disabled selected>Seleccionar ciudad</option>
                     <option value="ROSARIO">Rosario</option>
                     <option value="RAFAELA">Rafaela</option>
                 </select>
-                <input class="button" type="button" value="Consultar">
+                <input name="ask" id="ask" class="button" type="button" value="Consultar">
             </form>
         </section>
         <section id="section-weather-result">
+            
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
             <div class="card">
                 <h3 class="h3">Rosario</h3>

@@ -7,6 +7,7 @@
     <title>Clima app</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/help.css">
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
 </head>
 
@@ -34,7 +35,7 @@
             </div>  
         </section>    
         <section id="help">
-            <form action="/form.php">
+            <form action="">
                 <label for="Name">Nombre:</label>
                 <input type="text" name="name" id="name">
                 <br>
@@ -43,8 +44,8 @@
                 <br>
                 <label for="Message">Mensaje:</label>
                 <p><textarea name="Message" rows="10" cols="30"></textarea></p>
-                <input type="button" class="button" value="Limpiar">
-                <input type="button" class="button" value="Enviar">
+                <input name="clear" id="clear" type="button" class="button" value="Limpiar">
+                <input name="submit" id="submit" type="button" class="button" value="Enviar">
             </form>
         </section>
     </main>
