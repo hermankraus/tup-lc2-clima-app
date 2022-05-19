@@ -33,11 +33,13 @@ ul {
     border-radius: 12px;
     border: none;
     color: white;
-    padding: 7px 11px;
+    padding: 10px 11px;
+    height: 40px;
     text-align: center;
     text-decoration: none;
     display: inline-flex;
     font-size: 12spx;
+    font-weight: bold;
 }
 
 
@@ -45,18 +47,23 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--color-theme);
+    background: var(--color-gradient);
+    border-bottom: 3px solid var(--color-active);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 nav>ul {
     display: flex;
     justify-content: space-between;
     justify-content: center;
+    
+    
 }
 
 nav li {
     flex:
-        0 0 auto;
+        0 0 auto; 
 }
 
 nav li a {
@@ -65,15 +72,20 @@ nav li a {
     text-align: center;
     text-decoration: none;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: bold ;
     color: var(--color-active);
 }
 
-nav li a:hover{
-    background: var(--color-active);
-    color: var(--color-theme);
-     
+nav{
+    font-weight: bold;
+    border-bottom: 5px #5df2d6;
+    
 }
+
+nav li a:hover{
+    color: var(--color-back-active);    
+}
+
 nav li.current-page a{
     color: var(--color-theme);
     background: var(--color-active);
@@ -95,22 +107,29 @@ h1 {
     margin:
         0;
     color: white;
+    
+    
 }
 
 h1>img {
     width: 70px;
     vertical-align: middle;
+    align-items: center;
+    
 }
 
 h2 {
     color: var(--color-theme);
     margin: 16px 0;
     text-align: center;
+    font-weight: bold;
+    
 }
 
 h3 {
     color: var(--color-theme);
     margin: 8px 0;
+    text-align: center;
 }
 
 main section {
@@ -121,11 +140,12 @@ main section {
 footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-theme);
+    background: var(--color-gradient);
     width: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top: 3px solid var(--color-active);
 }
 
 footer p {
@@ -135,6 +155,10 @@ footer p {
 
 main p {
     margin-bottom: 16px;
+}
+
+form{
+    font-weight: bold;
 }
 
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */

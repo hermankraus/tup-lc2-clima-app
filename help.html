@@ -35,19 +35,24 @@
             </div>  
         </section>    
         <section id="help">
-            <form action="">
+            <form class="help" action="">
                 <label for="Name">Nombre:</label>
-                <input type="text" name="name" id="name">
+                <br>
+                <input class="input-box" type="text" name="name" id="name">
                 <br>
                 <label for="Email">Email:</label>
-                <input type="email">
+                <br>
+                <input class="input-box" type="email">
                 <br>
                 <label for="Message">Mensaje:</label>
                 <p><textarea name="Message" rows="10" cols="30"></textarea></p>
-                <input name="clear" id="clear" type="button" class="button" value="Limpiar">
-                <input name="submit" id="submit" type="button" class="button" value="Enviar">
+                <div class="button_container">
+                    <input class="button" name="clear" id="clear" type="button" class="button" value="Limpiar">
+                    <input class="button" name="submit" id="submit" type="button" class="button" value="Enviar">
+                </div>    
             </form>
         </section>
+        <p class="alert-message">Ingrese un Email valido</p>
     </main>
     <footer>
         <p>

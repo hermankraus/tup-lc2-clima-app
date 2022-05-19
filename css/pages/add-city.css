@@ -1,0 +1,56 @@
+form{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-box{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 12spx;
+    height: 40px;
+    padding: 5px;
+    width: 233.33px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.input-button{
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: var(--color-theme);
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 10px 11px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 12spx;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.city_status{
+    display: block;
+    text-align: center;
+}
+.city_status p {
+    width: 530px;
+    margin: 35px auto;
+    padding: 20px 60px;
+    font-weight: lighter;
+    font-size: small;
+    color: white;
+    border-radius: 20px;
+}
+.city_status p:nth-child(1){
+    background-color: #28a745;
+}
+.city_status p:nth-child(2){
+    background-color: #dc3545;
+}
+.city_status p:nth-child(3){
+    background-color: #ffc107;
+}
