@@ -6,11 +6,12 @@ div.card {
    border: 1px solid rgb(194, 194, 194);
    border-radius: 20px;
    margin: 40px;
-   box-shadow: 5px 5px 15px grey;
-}
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;}
 
 div.card p {
-   margin: 8px; 
+   margin: 15px; 
    margin-left: 20px; 
    margin-right: 20px; 
 }
+
+
