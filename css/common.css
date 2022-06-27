@@ -158,13 +158,14 @@ button {
     background-color: var(--color-theme); 
     color: white;
     margin-top: 10px; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 textarea {
     padding: 8px;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 
