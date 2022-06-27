@@ -1,6 +1,6 @@
 # tup-lc2-clima-app
 
-Clima App viene a ofrecer un servicio de consultas de estados climáticos según tu localidad.
+Clima App viene a ofrecer un servicio de consultas de estados climáticos según tu localidad. 
 
 En la sección de ayuda podrás encontrar el orígen de los datos que utilizamos.
 
