@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima app</title>
+    <title>Clima App</title>
+    <link rel="shorcut icon" href="img/favicon 32x32.png">
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/pages/help.css">
-    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/pages/help.css">
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/help.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>
-            <img src="./img/favicon 32x32.png" alt="IMG">
+            <img src="img/favicon 32x32.png" id="logo">
             <span>Clima App</span>
         </h1>
         <nav>
@@ -27,32 +29,33 @@
     </header>
     <!-- Contenido principal de la página -->
     <main>
-        <h2>Ayuda Clima App v.1.0</h2>
+        <div class="helpContainer">
+        <h2>Ayuda Clima App V.1.0</h2>
         <section>
-            <div class="card">
-                <p>Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer" >OperWeatherMap</a></p>
-                <p>Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima.</a></p>
-            </div>  
-        </section>    
-        <section id="help">
+            <div>
+                <p>
+                    Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a>.
+                </p>
+                <p>
+                    Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luegoseleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima</a>.
+                </p>
+            </div>
+        </section>
+        <section>
             <form class="help" action="">
-                <label for="Name">Nombre:</label>
-                <br>
-                <input class="input-box" type="text" name="name" id="name">
-                <br>
-                <label for="Email">Email:</label>
-                <br>
-                <input class="input-box" type="email">
-                <br>
-                <label for="Message">Mensaje:</label>
-                <p><textarea name="Message" rows="10" cols="30"></textarea></p>
-                <div class="button_container">
-                    <input class="button" name="clear" id="clear" type="button" class="button" value="Limpiar">
-                    <input class="button" name="submit" id="submit" type="button" class="button" value="Enviar">
-                </div>    
+                <label for="name">Nombre:</label>
+                <input id="name" name="name" type="text">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email">
+                <label for="textArea">Mensaje:</label>
+                <textarea id="textarea" name="metextarea" cols="35" rows="15"></textarea>
+            <p>
+                <button>Limpiar</button>
+                <button>Enviar</button>
+            </p>
             </form>
         </section>
-        <p class="alert-message">Ingrese un Email valido</p>
+        </div>
     </main>
     <footer>
         <p>

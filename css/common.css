@@ -2,17 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Geneva, Tahoma, sans-serif, Verdana, sans-serif;
-
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
 }
 
-:root {
-    /* Declaro variables CSS con colores principales */
+ :root {
     --color-theme: #00594c;
     --color-active: #5df2d6;
     --color-back-active: #04957d;
-    --color-gradient: linear-gradient(to right, var(--color-theme),
-            var(--color-back-active));
+    --color-gradient: linear-gradient(to right, var(--color-theme), var(--color-back-active));
+    --color-success: #28a745; 
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
 }
 
 body {
@@ -26,44 +26,33 @@ ul {
     margin: 0;
 }
 
-.button {
+button,
+a {
     user-select: none;
     -webkit-user-select: none;
-    background-color: var(--color-theme);
-    border-radius: 12px;
-    border: none;
-    color: white;
-    padding: 10px 11px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-flex;
-    font-size: 12spx;
-    font-weight: bold;
 }
-
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
     background: var(--color-gradient);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
     border-bottom: 3px solid var(--color-active);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    
+    
+
 }
 
 nav>ul {
     display: flex;
     justify-content: space-between;
     justify-content: center;
-    
-    
 }
 
 nav li {
-    flex:
-        0 0 auto; 
+    flex: 0 0 auto;
 }
 
 nav li a {
@@ -72,64 +61,56 @@ nav li a {
     text-align: center;
     text-decoration: none;
     font-size: 1em;
-    font-weight: bold ;
+    font-weight: bold;
     color: var(--color-active);
 }
 
-nav{
-    font-weight: bold;
-    border-bottom: 5px #5df2d6;
-    
-}
-
-nav li a:hover{
-    color: var(--color-back-active);    
-}
-
-nav li.current-page a{
+nav li.current-page a {
     color: var(--color-theme);
-    background: var(--color-active);
+    background-color: var(--color-active);
     pointer-events: none;
-    border-top-left-radius:  15px;
-    border-top-right-radius:  15px;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
 }
 
 main {
-    margin-top: 150px;
+    margin-top: 120px;
     overflow: auto;
     padding: 16px;
     padding-bottom: 60px;
-    height: calc (100% - 120px);
+    height: calc(100% - 120px);
 }
 
 h1 {
+    display: flex;
     text-align: center;
-    margin:
-        0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto ;
     color: white;
-    
-    
 }
 
-h1>img {
+h1 img {
     width: 70px;
-    vertical-align: middle;
+    display: flex;
+    text-align: center;
+    justify-content: center;
     align-items: center;
     
+
 }
 
 h2 {
     color: var(--color-theme);
-    margin: 16px 0;
-    text-align: center;
-    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
     
+    text-align: center;
 }
 
 h3 {
     color: var(--color-theme);
     margin: 8px 0;
-    text-align: center;
 }
 
 main section {
@@ -140,12 +121,13 @@ main section {
 footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-gradient);
+    background: var(--color-gradient); 
     width: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 3px solid var(--color-active);
+    
 }
 
 footer p {
@@ -157,17 +139,42 @@ main p {
     margin-bottom: 16px;
 }
 
-form{
-    font-weight: bold;
+input {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
+select {
+    padding: 8px; 
+    border-radius: 6px; 
+}
+
+button {
+    padding: 10px;
+    border: 6px var(--color-gradient); 
+    border-radius: 12px; 
+    background-color: var(--color-theme); 
+    color: white;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+textarea {
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
+
 @media (min-width: 400px) {
     main {
         padding-left: 10%;
         padding-right: 10%;
     }
-
     footer {
         padding-top: 20px;
         padding-bottom: 20px;

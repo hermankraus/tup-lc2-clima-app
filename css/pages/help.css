@@ -1,67 +1,22 @@
-.card p{
-    margin-top: 5px;
-    padding: 10px;
-    font-weight: bold;   
-}
-
-.form-help{
+.help {
     display: flex;
     flex-direction: column;
-    
-}
-.form-help input{
-    margin-bottom: 15px;
 }
 
-a:visited {
-    color: var(--color-active);
+.help button {
+    align-self: center;
 }
 
-a:hover {
-    color: var(--color-theme);
+.help p {
+    text-align: center; 
+    align-self: normal; 
+    color: white; 
+    padding: 15px; 
+    margin: 10px; 
+    border-radius: 20px; 
 }
 
-a:active {
-    color: var(--color-active);
+p.error {
+    background-color: var(--color-error); 
 }
-
-.input-box{
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 12spx;
-    height: 30px;
-    padding: 5px;
-    width: 265px;
-    font-weight: bold;
-    margin-top: auto;
-    margin-bottom: 20px;
-}
-
-textarea{
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.alert-message{
-    width: 390px;
-    margin: 30px auto;
-    padding: 15px 50px;
-    text-align: center;
-    color: white;
-    border-radius: 20px;
-    background-color: #dc3545;
-}
-
-.button_container{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.button_container input:last-child{
-    margin-left: 5px;
-}
-
-
 
