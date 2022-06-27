@@ -26,8 +26,18 @@ function addCitiesToSelection() {
 }
 
 function cardConstructor() {
+
+    document.querySelector('.loadingSymbol').style.display = 'block';
+    removeLoadingSymbol();
+
+    setTimeout(function() {
+        document.querySelector('.card').style.display = 'block';
+    },0.1)
+
     API(selection.value);
+    document.querySelector('.card').style.display = 'none';
 }
+
 
 let weatherButton = document.getElementById("getWeather");
 weatherButton.addEventListener("click", cardConstructor)

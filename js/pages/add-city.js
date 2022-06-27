@@ -27,14 +27,20 @@ async function addCityToLocalStorage() {
         case "success": 
             cities.push(ciudad_nueva); 
             localStorage.setItem("CITIES", JSON.stringify(cities)); 
-            document.getElementById("results").innerHTML += successResult; 
+            document.getElementById("results").innerHTML += successResult;
+            document.querySelector('.loadingSymbol').style.display = 'block';
+            removeLoadingSymbol();
             removeAlert(); 
             break;
         case "warning":
+            document.querySelector('.loadingSymbol').style.display = 'block';
+            removeLoadingSymbol();
             document.getElementById("results").innerHTML += warningResult; 
             removeAlert();
             break;
         case "error":
+            document.querySelector('.loadingSymbol').style.display = 'block';
+            removeLoadingSymbol();
             document.getElementById("results").innerHTML += errorResult;
             removeAlert();
             break;
@@ -45,11 +51,12 @@ let successResult = '<p class="results success">Ciudad agregada con éxito</p>';
 let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';
 let warningResult = '<p class="results warning">La ciudad ingresada ya se encuentra almacenada</p>';
 let buttonAddCity = document.getElementById("buttonAddCity"); 
-buttonAddCity.addEventListener("click", addCityToLocalStorage); 
+buttonAddCity.addEventListener("click", addCityToLocalStorage);
+
 function removeAlert() { 
     setTimeout(function() {
         document.getElementsByClassName("results")[0].remove();
-    }, 1000);
+    }, 8000);
 }
 
 

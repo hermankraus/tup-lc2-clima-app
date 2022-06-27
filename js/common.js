@@ -51,3 +51,9 @@ function verClima(data) {
         section.innerHTML += card;
     }
 }
+
+function removeLoadingSymbol() {
+    setTimeout(function() {
+        document.querySelector('.loadingSymbol').style.display = 'none';
+    },1000)
+}
