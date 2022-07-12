@@ -20,10 +20,6 @@ async function API(cityName){
         })
         .then(data => {
             return data;
-
-            /*if(flag!=0){
-            verClima(data);
-            }else{data}*/
         })
         .catch(error => {
             return "error"

@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="css/pages/help.css">
     <script src="js/common.js" defer></script>
     <script src="js/pages/help.js" defer></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('YDO4PPWOkYjVV8mfT')
+    </script>
 </head>
 
 <body>
@@ -37,25 +42,28 @@
                     Esta App te permite consultar el clima de una ciudad en particular utilizando la API de <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a>.
                 </p>
                 <p>
-                    Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luegoseleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima</a>.
+                    Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima</a>.
                 </p>
             </div>
         </section>
         <section>
-            <form class="help" action="">
+            <form id="form" class="help" action="">
                 <label for="name">Nombre:</label>
-                <input id="name" name="name" type="text">
+                <input id="name" name="name" type="text" required>
                 <label for="email">Email:</label>
-                <input id="email" name="email" type="email">
-                <label for="textArea">Mensaje:</label>
-                <textarea id="textarea" name="metextarea" cols="35" rows="15"></textarea>
+                <input id="email" name="email" type="email" required>
+                <label for="metextarea">Mensaje:</label>
+                <textarea name="metextarea" id="metextarea" cols="30" rows="10"></textarea> 
             <p>
                 <button>Limpiar</button>
-                <button>Enviar</button>
+                <input type="submit" id="button" value="Enviar" >
             </p>
             </form>
         </section>
         </div>
+        <section>
+        <div id="errorMail" class="help">
+        </section>
     </main>
     <footer>
         <p>

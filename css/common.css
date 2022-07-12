@@ -40,9 +40,6 @@ header {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border-bottom: 3px solid var(--color-active);
-    
-    
-
 }
 
 nav>ul {
@@ -70,7 +67,8 @@ nav li.current-page a {
     background-color: var(--color-active);
     pointer-events: none;
     border-top-left-radius: 10px; 
-    border-top-right-radius: 10px; 
+    border-top-right-radius: 10px;
+    
 }
 
 main {
@@ -189,14 +187,6 @@ button:active {
         transform: rotate(360deg);
     }
 }
-
-
-textarea {
-    padding: 8px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
-
 
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
 

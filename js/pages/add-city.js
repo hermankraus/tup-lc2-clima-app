@@ -1,6 +1,3 @@
-
-
-/*let cities = getCitiesFromLocalStorage();*/
 async function checkCity(ciudad_nueva) {
     let cities = getCitiesFromLocalStorage();
   
@@ -11,10 +8,10 @@ async function checkCity(ciudad_nueva) {
     };
 
     if (await API(ciudad_nueva) == "error") {
-        let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';
-        document.getElementById("results").innerHTML += errorResult;
+        
+        document.getElementById("results").innerHTML += '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';;
         removeAlert();
-        return "error";
+        
     }
     else {
         return "success"; 
@@ -30,29 +27,19 @@ async function addCityToLocalStorage() {
         case "success": 
             cities.push(ciudad_nueva); 
             localStorage.setItem("CITIES", JSON.stringify(cities)); 
-            document.getElementById("results").innerHTML += successResult;
-        
+            document.getElementById("results").innerHTML += '<p class="results success">Ciudad agregada con éxito</p>';
             removeAlert(); 
             break;
+
         case "warning":
-            
-            document.getElementById("results").innerHTML += warningResult; 
+            document.getElementById("results").innerHTML += '<p class="results warning">La ciudad ingresada ya se encuentra almacenada</p>';
             removeAlert();
             break;
 
         default:
             break;
-        /*case "error":
-            
-            document.getElementById("results").innerHTML += errorResult;
-            removeAlert();
-            break;*/
     };
 };
-
-let successResult = '<p class="results success">Ciudad agregada con éxito</p>'; 
-/*let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';*/
-let warningResult = '<p class="results warning">La ciudad ingresada ya se encuentra almacenada</p>';
 
 let buttonAddCity = document.getElementById("buttonAddCity"); 
 buttonAddCity.addEventListener("click", addCityToLocalStorage);
@@ -60,5 +47,5 @@ buttonAddCity.addEventListener("click", addCityToLocalStorage);
 function removeAlert() { 
     setTimeout(function() {
         document.getElementsByClassName("results")[0].remove();
-    }, 8000);
+    }, 5000);
 }

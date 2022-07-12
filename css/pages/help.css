@@ -8,8 +8,31 @@ label{
     margin-top: 8px;
 }
 
-.help button {
+#button {
     align-self: center;
+    padding: 10px;
+    border: 6px var(--color-gradient); 
+    border-radius: 12px; 
+    background-color: var(--color-theme); 
+    color: white;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#button:hover {
+    background-color: #116859;
+}
+
+#button:active {
+    cursor: progress;
+}
+ 
+#metextarea {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 8px;
 }
 
 .help p {
@@ -23,5 +46,27 @@ label{
 
 p.error {
     background-color: var(--color-error); 
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+p.success {
+    background-color: var(--color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; 
+    margin: 10px; 
+    border-radius: 20px; 
+    width: 250px;
+}
+
+#errorMail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 /*parrafo de validacion de mail

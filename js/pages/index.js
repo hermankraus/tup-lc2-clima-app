@@ -4,7 +4,6 @@ function addCitiesToSelection() {
     let cities = getCitiesFromLocalStorage();
     
     if (cities.length == 0) { 
-        /*selection.innerHTML += `<option disabled selected>No hay ciudades agregadas</option>`*/
         selection.innerHTML += `<option disabled selected>No hay ciudades agregadas</option>`
     }
     else {
@@ -17,30 +16,31 @@ function addCitiesToSelection() {
 
 async function verClima() {
 
-   /* setTimeout(function() {
+    /*setTimeout(function() {
         document.getElementById('showCard').style.display = 'block';
-    },0.1)*/
+    },6000)*/
 
     let data = await API(selection.value);
     document.getElementById('showCard').style.display = 'block';
 
-    let ciudad = data.name;
-    let icono = data.weather[0].icon;
-    let temperatura = data.main.temp;
-    let sensacionTermica = data.main.feels_like;
-    let humedad = data.main.humidity;
-    let viento = data.wind.speed;
-    let presion = data.main.pressure;
-
+    const weatherData={
+        ciudad: data.name,
+        icono: data.weather[0].icon,
+        temperatura: data.main.temp,
+        sensacionTermica: data.main.feels_like,
+        humedad: data.main.humidity,
+        viento: data.wind.speed,
+        presion: data.main.pressure,
+    }
    
     let card = `<div class="card"> 
-                    <h3>${ciudad}</h3>
-                    <img src="http://openweathermap.org/img/wn/${icono}.png" alt="Imagen">
-                    <p>Temperatura: ${temperatura}°</p>
-                    <p>Sensación Térmica: ${sensacionTermica}°</p>
-                    <p>Humedad: ${humedad}%</p>
-                    <p>Velocidad del Viento: ${viento}km/h</p>
-                    <p>Presión: ${presion} P</p>
+                    <h3>${weatherData.ciudad}</h3>
+                    <img src="http://openweathermap.org/img/wn/${weatherData.icono}.png" alt="Imagen">
+                    <p>Temperatura: ${weatherData.temperatura}°</p>
+                    <p>Sensación Térmica: ${weatherData.sensacionTermica}°</p>
+                    <p>Humedad: ${weatherData.humedad}%</p>
+                    <p>Velocidad del Viento: ${weatherData.viento}km/h</p>
+                    <p>Presión: ${weatherData.presion} P</p>
                 </div>`
 
     let section = document.getElementById("showCard");
@@ -49,21 +49,6 @@ async function verClima() {
         section.innerHTML += card;
     }
 }
-
-
-
-/*async function cardConstructor() {
-
-  
-
-    setTimeout(function() {
-        document.getElementById('showCard').style.display = 'block';
-    },0.1)
-
-    API(selection.value, 1);
-    document.getElementById('showCard').style.display = 'none';
-}*/
-
 
 let weatherButton = document.getElementById("getWeather");
 weatherButton.addEventListener("click", verClima)
