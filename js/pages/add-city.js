@@ -1,6 +1,6 @@
 
 
-
+/*let cities = getCitiesFromLocalStorage();*/
 async function checkCity(ciudad_nueva) {
     let cities = getCitiesFromLocalStorage();
   
@@ -10,12 +10,15 @@ async function checkCity(ciudad_nueva) {
         };
     };
 
-    if (await API(ciudad_nueva) == "error") { 
+    if (await API(ciudad_nueva) == "error") {
+        let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';
+        document.getElementById("results").innerHTML += errorResult;
+        removeAlert();
         return "error";
     }
     else {
         return "success"; 
-    };
+    }
 }
 
 async function addCityToLocalStorage() { 
@@ -28,28 +31,29 @@ async function addCityToLocalStorage() {
             cities.push(ciudad_nueva); 
             localStorage.setItem("CITIES", JSON.stringify(cities)); 
             document.getElementById("results").innerHTML += successResult;
-            document.querySelector('.loadingSymbol').style.display = 'block';
-            removeLoadingSymbol();
+        
             removeAlert(); 
             break;
         case "warning":
-            document.querySelector('.loadingSymbol').style.display = 'block';
-            removeLoadingSymbol();
+            
             document.getElementById("results").innerHTML += warningResult; 
             removeAlert();
             break;
-        case "error":
-            document.querySelector('.loadingSymbol').style.display = 'block';
-            removeLoadingSymbol();
+
+        default:
+            break;
+        /*case "error":
+            
             document.getElementById("results").innerHTML += errorResult;
             removeAlert();
-            break;
+            break;*/
     };
 };
 
 let successResult = '<p class="results success">Ciudad agregada con éxito</p>'; 
-let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';
+/*let errorResult = '<p class="results error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>';*/
 let warningResult = '<p class="results warning">La ciudad ingresada ya se encuentra almacenada</p>';
+
 let buttonAddCity = document.getElementById("buttonAddCity"); 
 buttonAddCity.addEventListener("click", addCityToLocalStorage);
 
@@ -58,6 +62,3 @@ function removeAlert() {
         document.getElementsByClassName("results")[0].remove();
     }, 8000);
 }
-
-
-
