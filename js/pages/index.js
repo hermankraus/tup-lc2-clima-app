@@ -15,12 +15,11 @@ function addCitiesToSelection() {
 }
 
 async function verClima() {
-
-    /*setTimeout(function() {
-        document.getElementById('showCard').style.display = 'block';
-    },6000)*/
-
+    const cargando = document.getElementById("loadingSymbol");
+    cargando.style.display = 'block';
+    document.getElementById('showCard').style.display = 'none';
     let data = await API(selection.value);
+    cargando.style.display = 'none';
     document.getElementById('showCard').style.display = 'block';
 
     const weatherData={
