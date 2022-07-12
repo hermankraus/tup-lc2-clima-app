@@ -33,6 +33,7 @@ label{
     height: 150px;
     border-radius: 10px;
     margin-bottom: 8px;
+    padding: 8px;
 }
 
 .help p {
