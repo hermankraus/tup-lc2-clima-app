@@ -1,9 +1,10 @@
 const btn = document.getElementById('button');
+const cargando = document.getElementById("loadingSymbol");
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
-
+   cargando.style.display = 'block';
    btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
@@ -12,6 +13,7 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Enviar';
+      cargando.style.display = 'none';
       document.getElementById("errorMail").innerHTML += '<p class="errorMail success">Email enviado </p>';
       /*alert('Sent!');*/
     }, (err) => {
@@ -20,3 +22,7 @@ document.getElementById('form')
         /*alert(JSON.stringify(err));*/
     });
 });
+
+function limpiarFormulario() {
+  document.getElementById("form").reset();
+}

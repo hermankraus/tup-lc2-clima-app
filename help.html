@@ -55,13 +55,14 @@
                 <label for="metextarea">Mensaje:</label>
                 <textarea name="metextarea" id="metextarea" cols="30" rows="10" required></textarea> 
             <p>
-                <button>Limpiar</button>
-                <input type="submit" id="button" value="Enviar" >
+                <button  onclick="limpiarFormulario()" value="Limpiar">Limpiar</button>
+                <input type="submit" id="button"  value="Enviar"  >
             </p>
             </form>
         </section>
         </div>
         <section>
+        <div class="loadingSymbol" id="loadingSymbol"></div>
         <div id="errorMail" class="help">
         </section>
     </main>
